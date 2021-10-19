@@ -1,8 +1,5 @@
 class Solution {
     public String findReplaceString(String s, int[] indices, String[] sources, String[] targets) {
-        String result = "";
-        int previousIndex = 0;
-        
         List<int[]> sorted = new ArrayList<>();
         for (int i = 0 ; i < indices.length; i++) {
           sorted.add(new int[]{indices[i], i});  
