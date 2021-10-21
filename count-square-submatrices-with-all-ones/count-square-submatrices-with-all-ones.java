@@ -17,11 +17,9 @@ class Solution {
         
         return result;
     }
+    
     private boolean isAllOnes(int[][]matrix, int x, int y, int range) {
-        int m = matrix.length;
-        int n = matrix[0].length;
         int[][] moves = {{1 + range, 1 + range}, {1 + range, 0}, {0, 1 + range}};
-        
         for (int i = x; i <= x + range; i++) {
             for (int j = y; j <= y + range; j++) {
                 if (matrix[i][j] == 0) return false;
