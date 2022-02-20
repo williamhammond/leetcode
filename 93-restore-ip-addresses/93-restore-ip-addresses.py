@@ -6,9 +6,6 @@ class Solution:
         self.backtrack(s, 0, "", result)
         return result
     
-    # 0. Define base-case 
-    # 1. Express way of adding dot
-    # 2. Eject invalid result
     def backtrack(self, s: str, index: int, current: str, result: List[str]):
         if index == 4:
             if not s:
