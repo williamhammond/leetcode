@@ -5,10 +5,8 @@ class Solution:
         return result
     
     def backtrack(self, s: str, index: int, current: str, result: List[str]):
-        if index == 4:
-            if not s:
-                result.append(current[:-1])
-            return
+        if index == 4 and not s:
+            result.append(current[:-1])
         if not s: 
             return
         for i in range (1, 4):
