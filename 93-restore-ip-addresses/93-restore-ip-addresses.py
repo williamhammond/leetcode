@@ -1,5 +1,3 @@
-import re
-
 class Solution:
     def restoreIpAddresses(self, s: str) -> List[str]:
         result = []
@@ -19,4 +17,3 @@ class Solution:
                 continue
             
             self.backtrack(s[i:], index + 1, current + octet + ".", result);
-    
