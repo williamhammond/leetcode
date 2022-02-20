@@ -11,6 +11,7 @@ class Solution:
             if not s:
                 result.append(current[:-1])
             return
+        if not s: return
         for i in range (1, 4):
             if not s:
                 continue
