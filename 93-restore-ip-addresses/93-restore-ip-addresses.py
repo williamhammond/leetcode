@@ -11,10 +11,9 @@ class Solution:
             if not s:
                 result.append(current[:-1])
             return
-        if not s: return
+        if not s: 
+            return
         for i in range (1, 4):
-            if not s:
-                continue
             octet = s[0: i]
             if int(octet) > 255 or i != len(octet) or (len(octet) > 1 and octet[0] == "0"): 
                 continue
