@@ -12,7 +12,6 @@ class Solution:
         return result
     
     def flood_fill(self, grid: List[List[str]], m: int, n: int):
-        print("Grid at start")
         queue = []
         queue.append((m, n))
         while len(queue) > 0:
@@ -28,11 +27,3 @@ class Solution:
             if j + 1 < self.N and grid[i][j + 1] == "1":
                 queue.append((i, j + 1))
                 
-    def print_grid(self, grid: List[List[str]]):
-        print("")
-        for i in range(self.M):
-            print("")
-            for j in range(self.N):
-                print(grid[i][j], end=" ")
-        print("")
-            
