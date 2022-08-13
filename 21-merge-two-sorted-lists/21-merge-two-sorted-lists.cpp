@@ -17,42 +17,27 @@ public:
         if (!b) {
             return a;
         }
-        ListNode* current = nullptr;
-        ListNode* head = nullptr;
+        ListNode* head =  new ListNode();
+        ListNode* current = head;
         while (a && b)  {
             if (a->val < b->val) {
-                if (!head) {
-                    head= a;
-                    current = head;
-                } else {
-                    current -> next = a;
-                    current = current -> next;
-                }
+                current->next = a;
+                current = current->next;
                 a = a->next;
             } else {
-                if (!head) {
-                    head = b;
-                    current = head;
-                } else {
-                    current -> next = b;
-                    current = current -> next;
-                }
+                current->next = b;
+                current = current->next;
                 b = b->next;
             }
         }
         
-        while (a) {
-            current->next = a;    
-            current = current->next;
-            a = a -> next;
+        if (a) {
+            current->next = a;
+        }
+        if (b) {
+            current->next = b;
         }
         
-        while (b) {
-            current->next = b;
-            current = current->next;
-            b = b -> next;
-            
-        }
-        return head;
+        return head->next;
     }
 };
