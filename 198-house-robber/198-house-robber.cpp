@@ -4,9 +4,9 @@ public:
         int previous = 0;
         int current = 0;
         for (int i = 0; i < nums.size(); i++) {
-            int temp = max(previous + nums[i], current);
+            int next = max(previous + nums[i], current);
             previous = current;
-            current = temp;
+            current = next;
         }
         return current;
     }
